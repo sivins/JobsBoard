@@ -3,7 +3,8 @@ import { Http } from '@angular/http';
 
 @Component({
     selector: 'user',
-    templateUrl: './user.component.html'
+    templateUrl: './user.component.html',
+    styleUrls: ['./user.component.css']
 })
 export class userDataComponent {
     public users: User[];
