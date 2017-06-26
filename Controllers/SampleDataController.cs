@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace reverseJobsBoard.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/SampleData")]
     public class SampleDataController : Controller
     {
         private static string[] Summaries = new[]
