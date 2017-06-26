@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { User } from './userModel.component';
 
 @Component({
     selector: 'user',
@@ -16,8 +17,3 @@ export class userDataComponent {
     }
 }
 
-interface User {
-    first_name: string;
-    last_name: string;
-    email: string;
-}
