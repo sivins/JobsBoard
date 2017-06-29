@@ -16,8 +16,7 @@ namespace reverseJobsBoard.Controllers
         [HttpGet("[action]")]
         public IEnumerable<User> getAllUsers()
         {
-            
-            User[] Users = new User[]
+           User[] Users = new User[]
             {
             new User {first_name = "Daniel",last_name=
             "Ashcraft", email = "something@example.com"},
@@ -29,7 +28,7 @@ namespace reverseJobsBoard.Controllers
             "Wallard", email = "something@example.com"},
             };
 
-           return Users;
+            return Users;
         }
         
     }

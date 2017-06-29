@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { userDataComponent } from './components/users/user.component';
+import { AuthService } from './components/services/auth.service';
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -18,6 +19,7 @@ import { userDataComponent } from './components/users/user.component';
         userDataComponent,
         HomeComponent
     ],
+    providers:[AuthService],
     imports: [
         UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
         RouterModule.forRoot([
