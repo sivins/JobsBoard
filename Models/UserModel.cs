@@ -6,7 +6,7 @@ namespace reverseJobsBoard.Models
 			public string first_name { get; set; }
             public string last_name { get; set;}
             public string email { get; set;}
-			public Guid ID { get; set; } 
+			public Guid UserID { get; set; } 
  
        		public string Username { get; set; } 
  

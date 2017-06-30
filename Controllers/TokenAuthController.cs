@@ -61,7 +61,7 @@ namespace reverseJobsBoard.Controllers
             ClaimsIdentity identity = new ClaimsIdentity( 
                 new GenericIdentity(user.Username, "TokenAuth"), 
                 new[] { 
-                    new Claim("ID", user.ID.ToString()) 
+                    new Claim("UserID", user.UserID.ToString()) 
                 } 
             ); 
  
@@ -109,9 +109,9 @@ namespace reverseJobsBoard.Controllers
     public static class UserStorage 
     { 
         public static List<User> Users { get; set; } = new List<User> { 
-            new User {ID=Guid.NewGuid(),Username="user1",Password = "user1psd" }, 
-            new User {ID=Guid.NewGuid(),Username="user2",Password = "user2psd" }, 
-            new User {ID=Guid.NewGuid(),Username="user3",Password = "user3psd" } 
+            new User {UserID=Guid.NewGuid(),Username="user1",Password = "user1psd" }, 
+            new User {UserID=Guid.NewGuid(),Username="user2",Password = "user2psd" }, 
+            new User {UserID=Guid.NewGuid(),Username="user3",Password = "user3psd" } 
         }; 
     } 
 } 
