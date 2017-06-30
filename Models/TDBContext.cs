@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using reverseJobsBoard.Models;
 using reverseJobsBoard.Config;
 
-namespace reverseJobsBoard.Db
+namespace reverseJobsBoard.Models
 {
     public class TDBContext : DbContext
     {
