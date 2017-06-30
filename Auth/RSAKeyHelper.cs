@@ -11,6 +11,7 @@ namespace reverseJobsBoard.Auth
             
             using (RSA rsa = RSA.Create()) 
             { 
+                
                 return rsa.ExportParameters(true); 
 
             } 

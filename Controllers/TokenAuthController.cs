@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc; 
 using reverseJobsBoard.Auth; 
 using System.IdentityModel.Tokens.Jwt; 
+using System.IdentityModel.Tokens;
 using Newtonsoft.Json; 
 using System.Security.Claims; 
 using System.Security.Principal; 
