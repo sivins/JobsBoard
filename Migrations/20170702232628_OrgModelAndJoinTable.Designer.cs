@@ -8,9 +8,10 @@ using reverseJobsBoard.Models;
 namespace reverseJobsBoard.Migrations
 {
     [DbContext(typeof(TDBContext))]
-    partial class TDBContextModelSnapshot : ModelSnapshot
+    [Migration("20170702232628_OrgModelAndJoinTable")]
+    partial class OrgModelAndJoinTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")

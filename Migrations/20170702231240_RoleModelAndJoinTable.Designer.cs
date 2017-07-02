@@ -8,25 +8,14 @@ using reverseJobsBoard.Models;
 namespace reverseJobsBoard.Migrations
 {
     [DbContext(typeof(TDBContext))]
-    partial class TDBContextModelSnapshot : ModelSnapshot
+    [Migration("20170702231240_RoleModelAndJoinTable")]
+    partial class RoleModelAndJoinTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("reverseJobsBoard.Models.Org", b =>
-                {
-                    b.Property<Guid>("OrgID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("OrgID");
-
-                    b.ToTable("Orgs");
-                });
 
             modelBuilder.Entity("reverseJobsBoard.Models.Role", b =>
                 {
@@ -60,21 +49,6 @@ namespace reverseJobsBoard.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("reverseJobsBoard.Models.UserOrg", b =>
-                {
-                    b.Property<Guid>("UserID");
-
-                    b.Property<Guid>("OrgID");
-
-                    b.Property<Guid>("UserOrgID");
-
-                    b.HasKey("UserID", "OrgID");
-
-                    b.HasIndex("OrgID");
-
-                    b.ToTable("UserOrg");
-                });
-
             modelBuilder.Entity("reverseJobsBoard.Models.UserRole", b =>
                 {
                     b.Property<Guid>("UserID");
@@ -88,19 +62,6 @@ namespace reverseJobsBoard.Migrations
                     b.HasIndex("RoleID");
 
                     b.ToTable("UserRole");
-                });
-
-            modelBuilder.Entity("reverseJobsBoard.Models.UserOrg", b =>
-                {
-                    b.HasOne("reverseJobsBoard.Models.Org", "Org")
-                        .WithMany("UserOrgs")
-                        .HasForeignKey("OrgID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("reverseJobsBoard.Models.User", "User")
-                        .WithMany("UserOrgs")
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("reverseJobsBoard.Models.UserRole", b =>
